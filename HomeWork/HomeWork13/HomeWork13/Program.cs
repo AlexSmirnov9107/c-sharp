@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,21 +10,14 @@ namespace HomeWork13
     {
         static void Main(string[] args)
         {
-            ArrayList array = new ArrayList() {
-                1,2,3,4,5,6
-            };
-            int sum = 0;
-            for (int i = 0; i < array.Count; i++)
-            {
-                sum += (int)array[i];
-                if ((int)array[i] % 2 == 1) // 
-                    array.RemoveAt(i); // Удаляем Нечетные
-            }
-            foreach (var item in array)
-            {
-                if ((int)item > sum / array.Count) // Элементы больше среднеарифметического
-                    Console.WriteLine(item);
-            }
+            ///1.Создать коллекцию List<int> .Вывести на экран позицию и значение элемента, являющегося вторым максимальным значением в коллекции.Вывести на экран сумму элементов на четных позичиях.
+            List<int> array = new List<int>() { 1,2,4,5,6,7,8,8,10,21,3,4,5,6,7,8,9 };
+            List<int> array2 = new List<int>(array);
+            array2.Sort();
+            int max2 = array2[array2.Count - 2];
+            int pos = array.IndexOf(max2);
+            Console.WriteLine("Макс элемент {0} на позиции {1}",max2,pos);
+
             Console.ReadLine();
         }
     }
