@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADDAC003-1D7C-4014-94F9-ECD828160EFA}</ProjectGuid>
+    <ProjectGuid>{F719C0A0-A1A4-4A77-A3E4-56E5A83C816B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Practice9</RootNamespace>
-    <AssemblyName>Practice9</AssemblyName>
+    <RootNamespace>Practice13</RootNamespace>
+    <AssemblyName>Practice13</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vacancies .cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
