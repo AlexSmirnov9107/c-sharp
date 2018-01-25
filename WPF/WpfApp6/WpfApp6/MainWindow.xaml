@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="122" Margin="10,10,0,0" VerticalAlignment="Top" Width="183"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="135" Margin="10,148,0,0" VerticalAlignment="Top" Width="183"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="163" Margin="19,185,0,0" x:Name="tovar">
+            <ComboBoxItem Content="Сок" DataContext="250"/>
+            <ComboBoxItem Content="Вода" DataContext="200"/>
+            <ComboBoxItem Content="Хлеб" DataContext="100"/>
+        </ComboBox>
+        <Label Content="Выберите товар" HorizontalAlignment="Left" Margin="19,154,0,0" VerticalAlignment="Top" Width="163"/>
+        <Button Content="Расчет" HorizontalAlignment="Left" Margin="227,230,0,0" VerticalAlignment="Top" Width="266" Height="53"/>
+        <ComboBox x:Name="oil" Margin="19,84,345,207">
+            <ComboBoxItem Content="92" DataContext="150"/>
+            <ComboBoxItem Content="95" DataContext="180"/>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="19,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Количество литров" HorizontalAlignment="Left" Margin="19,18,0,0" VerticalAlignment="Top" Width="153"/>
+        <TextBox Text="{Binding Path=SelectedItem.DataContext, ElementName=oil}" HorizontalAlignment="Left" Height="23" Margin="285,148,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="208" IsReadOnly="True"/>
+        <Label Content="ИТОГО" HorizontalAlignment="Left" Margin="227,114,0,0" VerticalAlignment="Top"/>
+        <Label Content="Бензин" HorizontalAlignment="Left" Margin="227,145,0,0" VerticalAlignment="Top" Height="26"/>
+        <TextBox  Text="{Binding Path=SelectedItem.DataContext, ElementName=tovar}"  HorizontalAlignment="Left" Height="23" Margin="285,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"/>
+        <Label Content="Товар" HorizontalAlignment="Left" Margin="227,176,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
