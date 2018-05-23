@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hw4.Properties
+namespace ExplorerApp.Properties
 {
 
 
